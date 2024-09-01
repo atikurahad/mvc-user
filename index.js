@@ -1,6 +1,8 @@
 const app = require("./app")
+const confiq = require("./confiq/confiq")
 
 
-app.listen(3001,(req,res)=>{
-    console.log("Server is running on port 3001");
+const PORT = confiq.app.port;
+app.listen(PORT,(req,res)=>{
+    console.log(`Server is running on port ${PORT}`);
 })
