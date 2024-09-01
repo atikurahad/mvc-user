@@ -1,12 +1,12 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
 
+const { getAllUsers } = require('../controllers/userController');
 
-router.get("/",(req,res)=>{
-    res.status(200).json({
-        message: "get all users"
-    })
-})
+
+router.get("/", getAllUsers)
+router.get("/:id", getAllUsers)
+router.post("/", getAllUsers)
 
 
 module.exports= router;
